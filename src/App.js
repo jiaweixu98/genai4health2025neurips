@@ -289,22 +289,22 @@ function HomeSection() {
         
         <div className="home-actions">
           <a 
-            href="https://neurips.cc"
+            href="https://neurips.cc/Register/view-registration"
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackEvent('button_click', 'home', 'attend_conference')}
+            onClick={() => trackEvent('button_click', 'home', 'register_workshop')}
           >
-            Attend Conference
+            Register Workshop
           </a>
           <a 
-            href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/GenAI4Health" 
+            href="https://neurips.cc/virtual/2025/workshop/109566" 
             className="btn btn-secondary"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackEvent('button_click', 'home', 'submit_paper')}
+            onClick={() => trackEvent('button_click', 'home', 'accepted_papers')}
           >
-            Submit Paper
+            Accepted Papers
           </a>
         </div>
       </div>
