@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/genai4health2025.git"
+    "url": "https://github.com/jiaweixu98/genai4health2025neurips.git"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

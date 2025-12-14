@@ -13,7 +13,7 @@ This is the official website for **The Second Workshop on GenAI for Health: Pote
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jiaweixu98/genai4health2025neurips.git
-   cd GenAI4Health2025
+   cd genai4health2025neurips
    ```
 
 2. **Install dependencies**
@@ -34,28 +34,34 @@ The development server will automatically reload when you make changes to the co
 ## 📁 Project Structure
 
 ```
-GenAI4Health2025/
+genai4health2025neurips/
 ├── public/
 │   ├── data/
 │   │   └── images/
 │   │       ├── bg/
 │   │       ├── logo/
 │   │       ├── organizers/
-│   │       └── speakers/
-│   └── index.html
+│   │       ├── speakers/
+│   │       └── sponsor/
+│   ├── index.html
+│   ├── robots.txt
+│   └── sitemap.xml
 ├── src/
+│   ├── components/
+│   │   └── SEOFallback.js
 │   ├── App.js          # Main application component
 │   ├── index.js        # Entry point
 │   └── index.css       # Global styles
 ├── package.json
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ## 🛠️ Available Scripts
 
 - `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm test` - Run tests (if configured)
+- `npm run build` - Build for production (after that, you can check the webpage under `/build`, which is ready to use for deployment)
+
 
 ## 🎨 Features
 
@@ -92,6 +98,16 @@ The website works for both deployment locations:
 
 The site uses relative paths for assets, so it works in both root domains and subdirectories without any configuration changes needed.
 
+## 🤝 Contributing
+
+This is an open-source project. Feel free to fork, modify, and use it as a base for your own projects. If you'd like to contribute improvements back to this repository, please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## 📄 License
 
-This project is part of the NeurIPS 2025 workshop. All rights reserved. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 

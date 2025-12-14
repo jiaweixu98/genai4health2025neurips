@@ -306,6 +306,15 @@ function HomeSection() {
           >
             Accepted Papers
           </a>
+          <a 
+            href="https://genai4health.github.io/2024-NeurIPS/" 
+            className="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('button_click', 'home', 'past_event')}
+          >
+            Past Events
+          </a>
         </div>
       </div>
     </section>
@@ -426,19 +435,6 @@ function SpeakersSection() {
     },
     // GenAI Trustworthiness and Risks in Health
     {
-      id: "marzyeh-ghassemi",
-      name: "Marzyeh Ghassemi",
-      institution: "MIT",
-      link: "https://healthyml.org/marzyeh/",
-      image: process.env.PUBLIC_URL + "/data/images/speakers/MarzyehGhassemi.jpeg",
-      category: "GenAI Trustworthiness and Risks in Health",
-      keynote: { 
-        title: "AI's Clinical Risks", 
-        abstract: "Dr. Ghassemi will discuss examining AI's clinical risks and safety considerations in healthcare.", 
-        profile: "Associate Professor in EECS and IMES, MIT. Her research examines AI's clinical risks, earning MIT Review and Sloan Research Fellow honors." 
-      }
-    },
-    {
       id: "sharon-li",
       name: "Sharon Yixuan Li",
       institution: "UW-Madison",
@@ -491,6 +487,20 @@ function SpeakersSection() {
       }
     },
     {
+      id: "subho-mukherjee",
+      name: "Subho Mukherjee",
+      institution: "Hippocratic AI",
+      link: "https://www.linkedin.com/in/subho87/",
+      image: process.env.PUBLIC_URL + "/data/images/speakers/subho.jpeg",
+      category: "GenAI Use Cases for Health",
+      keynote: { 
+        profile: "Co-Founder & Chief Scientific Officer at Hippocratic AI. PhD."
+      }
+    },
+
+
+
+    {
       id: "david-ouyang",
       name: "David Ouyang",
       institution: "Kaiser Permanente Division of Research",
@@ -501,6 +511,30 @@ function SpeakersSection() {
         title: "AI for Cardiovascular Diagnosis and Disease Detection", 
         abstract: "Dr. Ouyang will discuss improving cardiovascular diagnosis and disease detection using computer vision and artificial intelligence.", 
         profile: "Research Scientist and Cardiologist at Kaiser Permanente Division of Research and Assistant Professor at Cedars-Sinai Medical Center, focused on improving cardiovascular diagnosis and disease detection using computer vision and artificial intelligence." 
+      }
+    },
+    {
+      id: "bryan-he",
+      name: "Bryan He",
+      institution: "Stanford University",
+      link: "https://ai.stanford.edu/~bryanhe/",
+      image: process.env.PUBLIC_URL + "/data/images/speakers/bryan he.jpg",
+      category: "GenAI Use Cases for Health",
+      keynote: { 
+        profile: "I am a recent PhD graduate from the Computer Science at Stanford University, advised by James Zou. I work on developing machine learning methods, along with applications in medicine and healthcare. My research is funded by the NSF Graduate Research Fellowship. Before arriving at Stanford, I received my Bachelors in Computer Science from the California Institute of Technology, where I was advised by Yisong Yue and Lakshminarayan Srinivasan." 
+      }
+    },
+    {
+      id: "tianlong-chen",
+      name: "Tianlong Chen",
+      institution: "UNC/hireEZ",
+      link: "https://tianlong-chen.github.io/",
+      image: process.env.PUBLIC_URL + "/data/images/speakers/tianlong-chen.jpg",
+      category: "GenAI Use Cases for Health",
+      keynote: { 
+        title: "AI for Healthcare Applications", 
+        abstract: "Dr. Chen will discuss AI applications in healthcare and technology.", 
+        profile: "Tianlong Chen is an Assistant Professor at UNC and technology expert, focusing on AI applications in healthcare and industry." 
       }
     }
   ], []);
@@ -625,30 +659,28 @@ function AgendaSection() {
     { time: "Dec 6 Morning", event: "", type: "header" },
     { time: "8:00", event: "Opening Remarks", type: "session" },
     { time: "8:00-8:15", event: "Eric Topol (Scripps Research)", type: "session" },
-    { time: "8:15-8:30", event: "James Zou (Stanford)", type: "session" },
-    { time: "8:30-8:45", event: "Marzyeh Ghassemi (MIT)", type: "session" },
-    { time: "8:45-9:00", event: "Ji Woong Kim (Stanford)", type: "session" },
+    { time: "8:15-8:30", event: "Tianlong Chen (UNC / hireEZ)", type: "session" },
+    { time: "8:30-8:45", event: "James Zou (Stanford)", type: "session" },
+    { time: "8:45-9:00", event: "Serena Yeung (Stanford)", type: "session" },
     { time: "9:00-9:30", event: "Coffee Break/Poster Session", type: "break" },
     { time: "9:30-9:45", event: "Fei Wang (Weill Cornell)", type: "session" },
-    { time: "9:45-10:00", event: "Serena Yeung (Stanford)", type: "session" },
+    { time: "9:45-10:00", event: "Ji Woong Kim (Stanford)", type: "session" },
     { time: "10:00-10:15", event: "Sharon Yixuan Li (UW-Madison)", type: "session" },
     { time: "10:15-10:30", event: "Jimeng Sun (UIUC)", type: "session" },
     { time: "10:30-10:45", event: "Diyi Yang (Stanford)", type: "session" },
     { time: "10:45-11:25", event: "Panel Discussion I (with morning speakers)", type: "session" },
     { time: "11:25-12:00", event: "Workshop Paper Presentations", type: "session" },
     { time: "12:00-1:00 PM", event: "Lunch Break/Poster Session/Industry Talks", type: "break" },
-    { time: "12:00-12:30", event: "Sponsor Expo (https://phti.org/)", type: "session" },
     { time: "Afternoon", event: "", type: "header" },
     { time: "1:00-1:15", event: "Suchi Saria (Johns Hopkins/Bayesian Health)", type: "session" },
     { time: "1:15-1:30", event: "Vivek Natarajan (Google Health)", type: "session" },
     { time: "1:30-1:45", event: "Haider Warraich (ARPA-H)", type: "session" },
-    { time: "1:45-2:00", event: "Munjal Shah (Hippocratic AI)", type: "session" },
-    { time: "2:00-2:15", event: "David Ouyang (Kaiser Permanente)", type: "session" },
-    { time: "2:15-2:30", event: "TBD", type: "session" },
-    { time: "2:30-3:00", event: "Panel Discussion 2 (with afternoon speakers)", type: "session" },
-    { time: "3:00-3:30", event: "Coffee Break/Poster Session/Networking", type: "break" },
-    { time: "3:30-4:00", event: "Workshop paper presentations", type: "session" },
-    { time: "4:00-4:50", event: "Poster Session/Networking", type: "session" },
+    { time: "1:45-2:00", event: "Munjal Shah & Subho Mukherjee (Hippocratic AI)", type: "session" },
+    { time: "2:00-2:15", event: "David Ouyang (Kaiser Permanente) and Bryan He (Stanford University)", type: "session" },
+    { time: "2:15-2:45", event: "Panel Discussion 2 (with afternoon speakers)", type: "session" },
+    { time: "2:45-3:15", event: "Coffee Break/Poster Session/Networking", type: "break" },
+    { time: "3:15-3:45", event: "Workshop paper presentations", type: "session" },
+    { time: "3:45-4:50", event: "Poster Session/Networking", type: "session" },
     { time: "4:50-5:00", event: "Award Ceremony/Closing Remarks", type: "session" }
   ], []);
 
@@ -657,7 +689,24 @@ function AgendaSection() {
       <div className="container">
         <h2 className="section-title">Agenda (Tentative)</h2>
         <p className="agenda-date">December 6, 2025 @Upper Level Room 33ABC, San Diego Convention Center</p>
-        
+               
+        <div className="agenda-link-container" style={{ marginTop: '2rem', textAlign: 'center' }}>
+          <a 
+            href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109566"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="agenda-official-link"
+            style={{ 
+              color: '#0066cc', 
+              textDecoration: 'none',
+              fontSize: '1.1rem',
+              fontWeight: '500'
+            }}
+            onClick={() => trackEvent('link_click', 'agenda', 'neurips_official_agenda')}
+          >
+            See the workshop agenda on NeurIPS official site →
+          </a> <br></br>
+        </div>
         <div className="agenda-timeline">
           {agenda.map((item, index) => (
             <div 
@@ -669,6 +718,7 @@ function AgendaSection() {
             </div>
           ))}
         </div>
+ 
       </div>
     </section>
   );
@@ -985,9 +1035,9 @@ function OrganizersSection() {
     },
     {
       name: "Junyuan Hong",
-      institution: "UT Austin",
+      institution: "National University of Singapore",
       link: "https://jyhong.gitlab.io/",
-      image: process.env.PUBLIC_URL + "/data/images/organizers/junyuan.jpg"
+      image: process.env.PUBLIC_URL + "/data/images/organizers/junyuan.jpeg"
     },
     {
       name: "Changan Chen",
@@ -1058,26 +1108,40 @@ function OrganizersSection() {
 
   const studentOrganizers = useMemo(() => [
     {
-      name: "Lily Boddy",
-      institution: "UT Austin",
-      role: "Student Volunteer",
-      link: "https://www.linkedin.com/in/lily-boddy/",
-      image: process.env.PUBLIC_URL + "/data/images/organizers/Lily Boddy.jpeg" 
-    },
-    {
       name: "Gregory Holste",
       institution: "UT Austin",
       role: "Student Volunteer",
       link: "https://www.gholste.me/",
       image: process.env.PUBLIC_URL + "/data/images/organizers/Gregory.png" 
     },
-    // {
-    //   name: "Yan Han",
-    //   institution: "Amazon",
-    //   role: "Award Committee",
-    //   link: "https://yannhan.github.io/",
-    //   image: process.env.PUBLIC_URL + "/data/images/organizers/yanhan.jpeg"
-    // }
+    {
+      name: "Haoyang Wang",
+      institution: "UT Austin",
+      role: "Student Volunteer",
+      link: "https://haoyang504.github.io/",
+      image: process.env.PUBLIC_URL + "/data/images/organizers/haoyang wang.jpeg" 
+    },
+    {
+      name: "Jinrui Fang",
+      institution: "UT Austin",
+      role: "Student Volunteer",
+      link: "https://www.linkedin.com/m/in/jinrui-fang",
+      image: process.env.PUBLIC_URL + "/data/images/organizers/jinrui fang.jpeg" 
+    },
+    {
+      name: "Charlie Yi",
+      institution: "UT Austin",
+      role: "Student Volunteer",
+      link: "https://www.linkedin.com/in/charlie-yi/",
+      image: process.env.PUBLIC_URL + "/data/images/organizers/CharlieYi.jpeg" 
+    },
+    {
+      name: "Lily Boddy",
+      institution: "UT Austin",
+      role: "Student Volunteer",
+      link: "https://www.linkedin.com/in/lily-boddy/",
+      image: process.env.PUBLIC_URL + "/data/images/organizers/Lily Boddy.jpeg" 
+    }
   ], []);
 
   const localOrganizingCommittee = useMemo(() => [
